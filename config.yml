@@ -1,0 +1,16 @@
+title: Hello World Start
+description: First Programm
+template:
+  repo: hello-world-start-template
+  name: hello-world-start
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
